@@ -1,0 +1,38 @@
+.demo.container {
+	background-image: url(/public/DemoCTAbg.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: auto;
+	height: 70vh;
+	justify-content: center;
+}
+
+.demo > .tag,
+.demo > .topic {
+	color: white;
+}
+
+.demo.cta {
+	color: black;
+	font-family: var(--poppins);
+	font-size: var(--size-18);
+	font-weight: var(--med);
+	padding: 1rem 2rem;
+	margin-top: 1.2rem;
+	border-radius: 30px;
+	background: linear-gradient(
+		to right,
+		transparent 50%,
+		white 50%
+	);
+	background-size: 200% 100%;
+	background-position: right bottom;
+	transition: all 0.4s ease-out;
+}
+
+@media (max-width: 50em) {
+	.demo.cta {
+		font-size: var(--size-14);
+		padding: 0.5rem 1rem;
+	}
+}

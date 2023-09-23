@@ -1,0 +1,17 @@
+.partners.container {
+	align-items: flex-start;
+	gap: 1rem;
+}
+.partnerimgcontain {
+	display: grid;
+    width: 100%;
+	grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    align-items: baseline;
+}
+
+@media (max-width: 50em) {
+	.partnerimgcontain {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}

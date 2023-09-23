@@ -1,0 +1,48 @@
+/* hero styling */
+#hero {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 0 0 4rem;
+	padding-top: 6rem;
+	align-items: center;
+	height: 60%;
+	gap: 4rem;
+}
+
+.heroimg {
+    height: 70vh;
+    object-fit: cover;
+    
+}
+
+.herotext {
+	font-family: var(--raleway);
+	font-size: var(--size-48);
+	font-weight: var(--bold);
+}
+
+.leftcontain {
+	display: flex;
+    margin: auto;
+	flex-direction: column;
+    justify-content: center;
+    max-width: 50rem;
+	gap: 2rem;
+}
+
+.heroCta {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+@media (max-width: 50em) {
+	#hero {
+		height: 60vh;
+	}
+
+	.herotext {
+		font-size: var(--size-32);
+	}
+}
+/* hero media */

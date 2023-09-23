@@ -1,0 +1,27 @@
+.dark.container{
+    background-color: black;
+    color: white;
+}
+
+.scrollgrid {
+    display: grid;
+	grid-auto-columns: 20%;
+	grid-auto-flow: column;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+}
+
+.scrollgrid div{
+    scroll-snap-align: start;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollgrid::-webkit-scrollbar {
+	display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollgrid {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}

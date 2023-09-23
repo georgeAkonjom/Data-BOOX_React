@@ -1,0 +1,14 @@
+.featurelist>ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+}
+
+.featurelist>ul>li{
+    background-image: url(/public/section-2-iconcheck-list.png);
+    left: 20rem;
+    background-position: left center;
+    background-size: 15px;
+    background-repeat: no-repeat;
+    padding: .5rem 1.5rem;
+}

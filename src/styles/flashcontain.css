@@ -1,0 +1,6 @@
+.flashcontain.container{
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+}

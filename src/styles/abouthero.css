@@ -1,0 +1,12 @@
+.aboutHero {
+	background-image: url(/public/aboutherobackground.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: auto;
+	height: 80vh;
+	justify-content: center;
+}
+
+.aboutHero > .tag, .aboutHero > .topic {
+	color: var(--main-bg-color);
+}

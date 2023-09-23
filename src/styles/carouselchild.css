@@ -1,0 +1,8 @@
+.scrollchild{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-bottom: 2px solid white;
+    max-width: 15vw;
+}
