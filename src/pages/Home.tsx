@@ -13,9 +13,9 @@ function Home() {
 		<>
 			<Hero />
 			<TextGroup
-				tag="DATABOOX EDGE"
-				topic="Unlock the true value of your data with our platform."
-				subtext="See which work apps your team is working in, and join them with a click. Shared cursors equals better than screen-sharing."
+				tag="FEATURES"
+				topic="Leverage your data for decision-making"
+				subtext="See your data in action with DataBOOX' analytics. Track indicators and objectives across a specified timeframe."
 			/>
 			<FlashContain />
 			<PartnerList />
@@ -23,12 +23,11 @@ function Home() {
 			<TextGroup
 				tag="HOW TO GET STARTED"
 				topic="Start your project in dataBOOX in 4 simple steps"
-				subtext="You can get started right away with your first project on dataBOOX at no cost."
+				subtext="You can get started right away with your first demo project on DataBOOX at no cost."
 			/>
-
 			<FlashContain2 />
-			<Carousel />
 			<DemoCTA />
+			<Carousel />
 			<Footer />
 		</>
 	);

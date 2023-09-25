@@ -1,18 +1,20 @@
-.dark.container{
-    background-color: black;
-    color: white;
+.dark.container {
+	background-color: black;
+	color: white;
+	padding-bottom: 12rem;
 }
 
 .scrollgrid {
-    display: grid;
-	grid-auto-columns: 20%;
+	display: grid;
+	gap: 2rem;
+	grid-auto-columns: 40%;
 	grid-auto-flow: column;
 	overflow-x: scroll;
 	scroll-snap-type: x mandatory;
 }
 
-.scrollgrid div{
-    scroll-snap-align: start;
+.scrollgrid div {
+	scroll-snap-align: start;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
@@ -24,4 +26,15 @@
 .scrollgrid {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
+}
+
+@media (max-width: 50em) {
+	.scrollgrid {
+	display: grid;
+	gap: 2rem;
+	grid-auto-columns: 100%;
+	grid-auto-flow: column;
+	overflow-x: scroll;
+	scroll-snap-type: x mandatory;
+}
 }

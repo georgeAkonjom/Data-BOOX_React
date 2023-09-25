@@ -10,12 +10,17 @@ function About() {
 			<AboutHero />
 			<AboutTextGroup />
 			<TextGroup
-				tag="OUR CORE VALUES"
-				topic="We’re a deeply mission-driven company."
+				tag="Mission"
+				topic="To bring about the technological advancement of Africa."
+				subtext=""
+			/>
+			<TextGroup
+				tag="Vision"
+				topic="To develop tech products and services for everyone everywhere."
 				subtext=""
 			/>
 			<DemoCTA />
-			<Footer/>
+			<Footer />
 		</>
 	);
 }

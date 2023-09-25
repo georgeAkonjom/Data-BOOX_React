@@ -1,8 +1,11 @@
 .scrollchild{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    border-bottom: 2px solid white;
-    max-width: 15vw;
+    /* align-items: center; */
+    gap: 2rem;
+    text-align: left;
+}
+
+.logo-partner{
+    align-self: center;
 }

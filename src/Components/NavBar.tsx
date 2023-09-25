@@ -1,7 +1,6 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../styles/navbar.css";
 import logo from "/full_logodataboox.png";
-import { Children } from "react";
 
 function Navbar() {
 	return (
@@ -14,12 +13,18 @@ function Navbar() {
 
 			<nav className="nav">
 				<ul role="list" className="pageList">
-					<CustomLink to="/">Home</CustomLink>
-					<CustomLink to="../pages/About">About</CustomLink>
-					<CustomLink to="../pages/Pricing">
-						Pricing
-					</CustomLink>
-					<CustomLink to="../pages/Contact">Contact</CustomLink>
+					<li>
+						<NavLink to="/">Home</NavLink>
+					</li>
+					<li>
+						<NavLink to="../pages/About">About</NavLink>
+					</li>
+					<li>
+						<NavLink to="../pages/Pricing">Pricing</NavLink>
+					</li>
+					<li>
+						<NavLink to="../pages/Contact">Contact</NavLink>
+					</li>
 				</ul>
 			</nav>
 
@@ -30,19 +35,6 @@ function Navbar() {
 			</div>
 		</header>
 	);
-}
-
-function CustomLink({ to, children, ...props }) {
-	const path = useResolvedPath(to)
-	const isActive = useMatch({ path: path.pathname, end: true })
-
-	return (
-		<li className={isActive ? "active" : ""}>
-			<Link to={to} {...props}>
-				{children}
-			</Link>
-		</li>
-	)
 }
 
 export default Navbar;

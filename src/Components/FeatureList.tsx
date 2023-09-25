@@ -37,17 +37,13 @@ function FeatureList() {
 				</p>
 				<br />
 				<p className="subtext">
-					DataBOOX is a revolutionary and homegrown solution
-					from BOOX Community Ltd, BOOX Community was
-					founded in 2019 out of a passion to see the
-					technological advancement of Africa.
+					DataBOOX is a an extremely flexibly M&E, management and data organization software, built to track progress over large amounts of data. See How our partners use DataBOOX for their businesses in the following section.
 				</p>
 				<div className="featurelist">
 					<ul>
-						<li className="subtext">Create Project</li>
-						<li className="subtext">Create Tools</li>
+						<li className="subtext">Create Projects</li>
 						<li className="subtext">Track Indicators</li>
-						<li className="subtext">Analyse Data</li>
+						<li className="subtext">Analyse and Visualize Data</li>
 						<li className="subtext">Monitor Progress</li>
 						<li className="subtext">Register and Monitor Beneficiaries</li>
 						<li className="subtext">Assign Interventions</li>

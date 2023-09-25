@@ -29,15 +29,14 @@ function AboutTextGroup() {
 				/>
 			</div>
 			<div className="about">
-				<p className="tag">DATABOOX EDGE</p>
+				<p className="tag">WHO WE ARE</p>
 				<p className="topic">
-					Unlock the true value of your data with our
-					platform.
+					We aren't your average company
 				</p>
 				<br />
 				<p className="subtext">
-					DataBOOX is a revolutionary and homegrown solution
-					from BOOX Community Ltd, BOOX Community was
+					DataBOOX is a homegrown solution
+					from <a href="">BOOX Community Ltd</a>. BOOX Community was
 					founded in 2019 out of a passion to see the
 					technological advancement of Africa. The
 					combination of innovation and commitment has
@@ -48,9 +47,9 @@ function AboutTextGroup() {
 				<br />
 				<p className="subtext">
 					Over the years we have grown to partner with
-					iNGOs, USAID partners providng technology for
-					development (T4D) and Information and
-					Communication Technology for development (ICT4D)
+					iNGOs and USAID partners, providing Technology for
+					Development (T4D) and Information and
+					Communication Technology for Development (ICT4D)
 					to overcome hurdles and barriers in their programs
 					and drive them to achieve sustainable success.
 				</p>

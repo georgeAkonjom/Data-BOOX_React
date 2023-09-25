@@ -3,8 +3,9 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: auto;
-	height: 70vh;
+	height: 80vh;
 	justify-content: center;
+	margin: -1rem;
 }
 
 .demo > .tag,

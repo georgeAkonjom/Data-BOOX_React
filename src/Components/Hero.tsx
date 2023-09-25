@@ -13,7 +13,7 @@ function Hero() {
 					</span>
 					<p className="subtext">
 						With a wide range of features and capabilities,
-						dataBoox is the perfect solution for managing
+						DataBOOX is the perfect solution for managing
 						and organizing your data.
 					</p>
 				</div>

@@ -11,17 +11,17 @@ function FlashContain2() {
 			<FlashCard
 				imgPath="/Two.png"
 				tag="Create your Project"
-				subtext="You can create your first project, select project location"
+				subtext="Create your first project during sign up, set project parameters and indicators."
 			/>
 			<FlashCard
 				imgPath="/Three.png"
-				tag="Login your dashboard"
-				subtext="Once your account is setup, its easy and simple to login and access your project dashboard."
+				tag="Log on to your dashboard"
+				subtext="Once your account is setup, Log on and access your project dashboard."
 			/>
 			<FlashCard
 				imgPath="Four.png"
-				tag="Enjoy dataBOOX"
-				subtext="Now you can enjoy the robust dataBOOX solid features."
+				tag="Add data to DataBOOX"
+				subtext="Already have data previously collected and want to upload all of it? Contact a team member for help."
 			/>
 		</div>
 	);
