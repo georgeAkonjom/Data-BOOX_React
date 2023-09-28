@@ -148,7 +148,6 @@ body {
 	font-family: var(--poppins);
 	font-size: var(--size-18);
 	color: var(--main-font-color);
-	overflow-x: hidden;
 }
 
 .container {

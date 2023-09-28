@@ -1,15 +1,22 @@
+import DemoCTA from "../Components/DemoCTA";
+import Footer from "../Components/Footer";
 import TextGroup from "../Components/TextGroup";
-import "../styles/construction.css"
-
+import "../styles/pricing.css";
+import BillToggle from "../Components/BillToggle";
 function Pricing() {
 	return (
-		<div className="underconstruction">
-			<TextGroup
-				tag="UNDER CONSTRUCTION"
-				topic="This page is in the works."
-				subtext="Check back in a bit"
-			/>
-		</div>
+		<>
+			<div className="container billing">
+				<TextGroup
+					tag="BILLING"
+					topic="Choose the plan that's right for your business"
+					subtext="Start with the free plan to try out our platform for 14 days."
+				/>
+				<BillToggle/>
+			</div>
+			<DemoCTA />
+			<Footer />
+		</>
 	);
 }
 

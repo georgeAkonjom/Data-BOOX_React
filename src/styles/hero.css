@@ -5,7 +5,7 @@
 	margin: 0 0 0 4rem;
 	padding-top: 6rem;
 	align-items: center;
-	height: 60%;
+	height: 80vh;
 	gap: 4rem;
 }
 
@@ -38,7 +38,7 @@
 
 @media (max-width: 50em) {
 	#hero {
-		height: 60vh;
+		height: 80vh;
 	}
 
 	.herotext {
