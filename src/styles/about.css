@@ -1,0 +1,13 @@
+.missionWrapper{
+    background-color: #fba201;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-around;
+    padding: 10vh;
+
+}
+
+.topic > span{
+    font-size: 1.2rem;
+}

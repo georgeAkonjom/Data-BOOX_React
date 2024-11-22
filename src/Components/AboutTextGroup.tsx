@@ -31,7 +31,7 @@ function AboutTextGroup() {
 			<div className="about">
 				<p className="tag">WHO WE ARE</p>
 				<p className="topic">
-					We aren't your average company
+					We're here to drive change in Africa.
 				</p>
 				<br />
 				<p className="subtext">
@@ -47,7 +47,7 @@ function AboutTextGroup() {
 				<br />
 				<p className="subtext">
 					Over the years we have grown to partner with
-					iNGOs and USAID partners, providing Technology for
+					developement organizations such as Heifer and IITA and International institutes for tropical agriculture, providing Technology for
 					Development (T4D) and Information and
 					Communication Technology for Development (ICT4D)
 					to overcome hurdles and barriers in their programs
