@@ -10,7 +10,7 @@ function FlashCard({
 	subtext,
 }: FlashCardProps) {
 	return (
-		<div className="flashcard container">
+		<div className="flashcard">
 			<div className="flashicon">
 				<img src={imgPath} alt="placeholder" />
 			</div>

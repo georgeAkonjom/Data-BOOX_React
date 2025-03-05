@@ -1,23 +1,35 @@
 /* hero styling */
 #hero {
 	display: flex;
-	justify-content: space-between;
-	margin: 0 0 0 4rem;
 	padding-top: 6rem;
 	align-items: center;
-	height: 80vh;
-	gap: 4rem;
+	justify-content: center;
+	margin: 0rem 8rem 0 8rem;
+	height: 70vh;
+}
+
+.heroimgcontain{
+	position: relative;
 }
 
 .heroimg {
-    height: 70vh;
-    object-fit: cover;
+    height: 40vh;
+	max-width: 40rem;
     
+}
+
+.backdrop{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+	height: 60vh;
 }
 
 .herotext {
 	font-family: var(--raleway);
-	font-size: var(--size-48);
+	font-size: var(--size-32);
 	font-weight: var(--bold);
 }
 
@@ -26,7 +38,7 @@
     margin: auto;
 	flex-direction: column;
     justify-content: center;
-    max-width: 50rem;
+    max-width: 40rem;
 	gap: 2rem;
 }
 

@@ -1,18 +1,34 @@
 import { Link, NavLink } from "react-router-dom";
+import { useState } from "react";
 import "../styles/navbar.css";
 import logo from "/full_logodataboox.png";
 
-function Navbar() {
+function Navbar(){
+	const [dropdown, setDropdown] = useState(false);
+
+	const handleClick = () =>{
+		const navlist = document.getElementById("navlist");
+		if (dropdown == false){
+			navlist.classList.remove("dropInactive");
+			setDropdown(true);
+		}
+		else{
+			navlist.classList.add("dropInactive");
+			setDropdown(false)
+		}
+	}
+
 	return (
+		<>
 		<header className="header">
 			<div>
 				<Link to="/">
-					<img src={logo} alt="The DataBOOX logo" />
+					<img className="logo" src={logo} alt="The DataBOOX logo" />
 				</Link>
 			</div>
 
 			<nav className="nav">
-				<ul role="list" className="pageList">
+				<ul role="list" id="navlist" className="pagelist dropInactive">
 					<li>
 						<NavLink to="/">Home</NavLink>
 					</li>
@@ -32,8 +48,10 @@ function Navbar() {
 				<Link to="../pages/Contact">
 					<button className="cta hide">Get Started</button>
 				</Link>
+				<button className="dropdownbtn" onClick={() => handleClick()}>-</button>
 			</div>
 		</header>
+		</>
 	);
 }
 

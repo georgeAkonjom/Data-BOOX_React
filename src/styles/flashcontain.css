@@ -1,6 +1,9 @@
 .flashcontain.container{
     flex-direction: row;
     align-items: baseline;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    background-color: #D9D9D9;
+    padding: 1rem;
+    border-radius: 30px;
 }

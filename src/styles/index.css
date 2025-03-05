@@ -47,7 +47,7 @@ a {
 }
 
 a:hover {
-	font-weight: bold;
+	font-weight: var(--bold);
 }
 
 a.active {
@@ -96,10 +96,11 @@ select {
 
 ::-webkit-scrollbar-thumb{
 	background: #555;
+	border-radius: 20rem;
 }
 
-::-webkit-scrollbar-track:horizontal {
-	display: none;
+::-webkit-scrollbar-track:vertical {
+	background: rgb(218, 218, 218);
 }
 
 ::-webkit-scrollbar-button:horizontal{
@@ -138,15 +139,13 @@ select {
 	--size-24: 24px;
 	--size-32: 32px;
 	--size-36: 36px;
-	--size-48: 48px;
-	--size-56: 56px;
 }
 
 /* util classes */
 
 body {
 	font-family: var(--poppins);
-	font-size: var(--size-18);
+	font-size: var(--size-16);
 	color: var(--main-font-color);
 }
 
@@ -154,7 +153,8 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: 4rem;
+	margin: 4rem;
+	padding: 1rem;
 }
 
 .cta {
@@ -164,9 +164,9 @@ body {
 	color: var(--main-bg-color);
 	background-color: var(--main-font-color);
 	font-family: var(--inter);
-	font-size: var(--size-18);
-	font-weight: var(--med);
-	padding: 1rem 2rem;
+	font-size: var(--size-12);
+	font-weight: var(--semi-bold);
+	padding: .8rem 1.6rem;
 	border-radius: 30px;
 	background: linear-gradient(
 		to right,
@@ -192,14 +192,15 @@ button:hover {
 
 .topic {
 	font-family: var(--raleway);
-	font-size: var(--size-36);
+	font-size: var(--size-24);
 	font-weight: var(--bold);
-	max-width: 50rem;
+	max-width: 30rem;
 }
 
 .subtext {
 	color: var(--sec-font-color-gray);
-	max-width: 40rem;
+	max-width: 30rem;
+	font-size: var(--size-12);
 }
 
 .tag {

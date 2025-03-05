@@ -1,33 +1,54 @@
 /* navbar styling */
-.active {
-	font-weight: var(--bold);
-}
 
 .header {
 	z-index: 1000;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 1rem;
 	border-bottom: 1px solid black;
 	width: 100vw;
 	background-color: white;
 	position: fixed;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
 }
 
-.pageList {
+.logo {
+	max-width: 4rem;
+}
+
+.pagelist {
 	display: flex;
 	flex-direction: row;
+	gap: 2rem;
 }
 
-.pageList li {
-	font-family: var(--inter);
-	margin: 0 1rem;
+.pagelist li{
+	font-size: 12px;
 }
 
-.pageList li > a {
-	font-size: var(--size-14);
+.dropdownbtn{
+	display: none;
 }
+
 /* navbar media */
 @media (max-width: 50em) {
+	.header{
+		align-items: flex-start;
+	}
+	.pagelist{
+		display: flex;
+		flex-direction: column;
+	}
+	.pagelist li{
+		padding: 1rem;
+	}
+	.dropInactive{
+		display: none;
+	}
+	.dropdownbtn{
+		display: block;
+	}
 }

@@ -1,5 +1,12 @@
-.flashcard.container{
-    padding: 2rem;
+.flashcard{
+    display: flex;
     align-items: center;
-    max-width: 30rem;
+    max-width:15rem;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+.flashicon {
+    max-width: 2rem;
 }

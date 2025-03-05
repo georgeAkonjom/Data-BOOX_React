@@ -12,13 +12,13 @@ function Home() {
 	return (
 		<>
 			<Hero />
+			<PartnerList />
 			<TextGroup
 				tag="FEATURES"
 				topic="Leverage your data for decision-making"
 				subtext="See your data in action with DataBOOX' analytics. Track indicators and objectives across a specified timeframe."
 			/>
 			<FlashContain />
-			<PartnerList />
 			<FeatureList />
 			<TextGroup
 				tag="HOW TO GET STARTED"
