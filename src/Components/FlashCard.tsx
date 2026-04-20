@@ -1,4 +1,3 @@
-import "../styles/flashcard.css";
 interface FlashCardProps {
 	imgPath: string;
 	tag: string;
@@ -10,12 +9,12 @@ function FlashCard({
 	subtext,
 }: FlashCardProps) {
 	return (
-		<div className="flashcard">
-			<div className="flashicon">
-				<img src={imgPath} alt="placeholder" />
+		<div className="flex flex-col items-center max-w-[15rem] p-4 text-center">
+			<div className="max-w-[2rem]">
+				<img src={imgPath} alt={tag} />
 			</div>
-			<p className="tag">{tag}</p>
-			<p className="subtext">{subtext}</p>
+			<p className="font-poppins font-semibold tracking-[2px] text-sec-font-gray py-4 uppercase text-xs">{tag}</p>
+			<p className="text-sec-font-gray text-xs">{subtext}</p>
 		</div>
 	);
 }

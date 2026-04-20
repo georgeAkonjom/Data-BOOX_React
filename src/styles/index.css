@@ -1,233 +1,76 @@
-/*  __CSS RESET ANDY_BELL https://andy-bell.co.uk/a-modern-css-reset/ __ */
+@import "tailwindcss";
 
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
+@theme {
+  --color-main-bg: white;
+  --color-sec-bg-gray: #fdfeef;
+  --color-main-font: black;
+  --color-sec-font-gray: #7f8c9f;
+
+  --font-poppins: "Poppins", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --font-weight-reg: 400;
+  --font-weight-med: 500;
+  --font-weight-semi-bold: 700;
+  --font-weight-bold: 800;
+
+  --text-xs: 16px;
+  --text-sm: 16px;
+  --text-base: 16px;
+  --text-lg: 26px;
+  --text-xl: 42px;
+  --text-2xl: 68px;
 }
 
-/* Remove default margin */
-body,
-h1,
-h2,
-h3,
-h4,
-p,
-figure,
-blockquote,
-dl,
-dd {
-	margin: 0;
+/* Custom utility for the complex CTA gradient animation */
+@utility cta {
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: black;
+  font-family: var(--font-inter);
+  @apply text-sm;
+  font-weight: 700;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  background: linear-gradient(to right, white 50%, black 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: background-position 0.4s ease-out, color 0.4s ease-out, box-shadow 0.4s ease-out;
+  cursor: pointer;
+  transform: translateZ(0); /* Trigger GPU acceleration */
+  backface-visibility: hidden;
+
+  &:hover {
+    box-shadow: inset 0 0 0 1px black; /* Use inset box-shadow instead of outline */
+    color: black;
+    background-position: left bottom;
+  }
 }
 
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role="list"],
-ol[role="list"] {
-	list-style: none;
+/* Keeping necessary resets that Tailwind doesn't fully cover or that are specific to your design */
+@layer base {
+  body {
+    @apply font-poppins text-base text-main-font min-h-screen;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+  }
+
+  a {
+    @apply font-raleway cursor-pointer transition-all duration-200 no-underline text-inherit;
+    &:hover {
+      text-shadow: 0.5px 0 0 currentColor;
+    }
+    &:focus-visible { @apply outline-2 outline-black outline-offset-2; }
+    &.active { @apply font-bold; }
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-thumb { @apply bg-neutral-600 rounded-full; }
+  ::-webkit-scrollbar-track:vertical { @apply bg-neutral-200; }
 }
 
-/* Set core root defaults */
-html:focus-within {
-	scroll-behavior: smooth;
-}
+/* We can now start removing the old manual CSS as we migrate components */
 
-/* Set core body defaults */
-body {
-	min-height: 100vh;
-	text-rendering: optimizeSpeed;
-	line-height: 1.5;
-}
-
-/* :Reworked: no styles Note this is not default refer to the andy bell reset */
-a {
-	all: unset;
-	font-family: var(--raleway);
-	cursor: pointer;
-}
-
-a:hover {
-	font-weight: var(--bold);
-}
-
-a.active {
-	font-weight: var(--bold);
-}
-
-/* Make images easier to work with */
-img,
-picture {
-	max-width: 100%;
-	display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input,
-button,
-textarea,
-select {
-	font: inherit;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-	html:focus-within {
-		scroll-behavior: auto;
-	}
-
-	*,
-	*::before,
-	*::after {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		scroll-behavior: auto !important;
-	}
-}
-
-/*  __CSS RESET ANDY_BELL https://andy-bell.co.uk/a-modern-css-reset/ __ */
-
-/* scrollbar  */
-/* width */
-
-::-webkit-scrollbar{
-	width: 10px;
-}
-
-::-webkit-scrollbar-thumb{
-	background: #555;
-	border-radius: 20rem;
-}
-
-::-webkit-scrollbar-track:vertical {
-	background: rgb(218, 218, 218);
-}
-
-::-webkit-scrollbar-button:horizontal{
-	background: #555;
-}
-
-/* scrollbar end  */
-
-/* __CUSTOM PROPERTIES__ */
-
-:root {
-	/* colors */
-	--main-bg-color: white;
-	--sec-bg-color-gray: #fdfeef;
-	--main-font-color: black;
-	--sec-font-color-gray: #7f8c9f;
-
-	/*font family*/
-	--poppins: "Poppins", sans-serif;
-	--raleway: "Raleway", sans-serif;
-	--inter: "Inter", sans-serif;
-
-	/* font weigth */
-	--reg: 400;
-	--med: 500;
-	--semi-bold: 700;
-	--bold: 800;
-
-	/* font sizes  */
-	--size-10: 10px;
-	--size-12: 12px;
-	--size-14: 14px;
-	--size-16: 16px;
-	--size-18: 18px;
-	--size-20: 20px;
-	--size-24: 24px;
-	--size-32: 32px;
-	--size-36: 36px;
-}
-
-/* util classes */
-
-body {
-	font-family: var(--poppins);
-	font-size: var(--size-16);
-	color: var(--main-font-color);
-}
-
-.container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	margin: 4rem;
-	padding: 1rem;
-}
-
-.cta {
-	all: unset;
-	display: flex;
-	align-items: center;
-	color: var(--main-bg-color);
-	background-color: var(--main-font-color);
-	font-family: var(--inter);
-	font-size: var(--size-12);
-	font-weight: var(--semi-bold);
-	padding: .8rem 1.6rem;
-	border-radius: 30px;
-	background: linear-gradient(
-		to right,
-		white 50%,
-		black 50%
-	);
-	background-size: 200% 100%;
-	background-position: right bottom;
-	transition: all 0.4s ease-out;
-}
-
-.cta:hover {
-	outline: 1px solid black;
-	color: black;
-	background-color: white;
-	background-position: left bottom;
-	transition-delay: 0.2s;
-}
-
-button:hover {
-	cursor: pointer;
-}
-
-.topic {
-	font-family: var(--raleway);
-	font-size: var(--size-24);
-	font-weight: var(--bold);
-	max-width: 30rem;
-}
-
-.subtext {
-	color: var(--sec-font-color-gray);
-	max-width: 30rem;
-	font-size: var(--size-12);
-}
-
-.tag {
-	font-family: var(--poppins);
-	font-weight: var(--semi-bold);
-	letter-spacing: 2px;
-	color: var(--sec-font-color-gray);
-	padding: 1rem 0;
-}
-
-/* media util styling */
-@media (max-width: 50em) {
-	body {
-		font-size: var(--size-14);
-	}
-	.topic {
-		font-size: var(--size-24);
-	}
-	.cta {
-		font-size: var(--size-14);
-		padding: 0.5rem 1rem;
-	}
-
-	.hide {
-		display: none;
-	}
-}
-
-@media (max-width: 30em) {
-}

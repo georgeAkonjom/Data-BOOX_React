@@ -1,9 +1,8 @@
 import TextGroup from "../Components/TextGroup";
-import "../styles/construction.css";
 
 function Contact() {
 	return (
-		<div className="underconstruction">
+		<div className="pt-24 min-h-[50vh] flex items-center justify-center">
 			<TextGroup
 				tag="UNDER CONSTRUCTION"
 				topic="This page is in the works."
